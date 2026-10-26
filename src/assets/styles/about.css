@@ -1,0 +1,131 @@
+.about-intro {
+  padding-top: 5rem;
+}
+
+.mission-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mission-card {
+  padding: 1.6rem;
+}
+
+.mission-card__title {
+  margin: 1.2rem 0 0.5rem;
+  font-size: 1.08rem;
+  font-weight: 650;
+}
+
+.mission-card__description {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.timeline {
+  position: relative;
+  padding-block: 0.5rem;
+  view-timeline-name: --about-timeline;
+  view-timeline-axis: block;
+}
+
+.timeline::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 1px;
+  background: rgb(148 163 184 / 17%);
+  content: "";
+}
+
+.timeline::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 1px;
+  background: linear-gradient(var(--accent-color), var(--accent-secondary));
+  content: "";
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: timeline-progress linear both;
+  animation-timeline: --about-timeline;
+  animation-range: entry 0% exit 0%;
+}
+
+@keyframes timeline-progress {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.timeline__node {
+  transform: scale(0.25);
+  animation: timeline-node-reveal both;
+  animation-timeline: view(block);
+  animation-range: entry 5% entry 65%;
+}
+
+@keyframes timeline-node-reveal {
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgb(16 185 129 / 13%), 0 0 24px rgb(16 185 129 / 65%);
+  }
+}
+
+.timeline__item {
+  z-index: 1;
+}
+
+.timeline::before,
+.timeline::after {
+  pointer-events: none;
+}
+
+.timeline__item {
+  position: relative;
+  padding: 0 0 2.4rem 3.5rem;
+  animation: reveal-up 700ms both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 35%;
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__node {
+  position: absolute;
+  top: 0.45rem;
+  left: 3px;
+  width: 15px;
+  height: 15px;
+  border: 3px solid var(--bg-color);
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 0 1px rgb(16 185 129 / 45%), 0 0 18px rgb(16 185 129 / 38%);
+}
+
+.timeline__year {
+  color: var(--accent-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.timeline__title {
+  margin: 0.35rem 0;
+  font-size: 1.14rem;
+  font-weight: 650;
+}
+
+.timeline__description {
+  max-width: 620px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+

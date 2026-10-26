@@ -1,0 +1,28 @@
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0.25;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-reveal {
+  animation: cardReveal 0.8s ease-out backwards;
+  animation-delay: var(--card-reveal-delay, 0ms);
+}

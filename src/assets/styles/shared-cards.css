@@ -1,0 +1,95 @@
+@import "./animations.css";
+
+.process-grid,
+.impact-grid,
+.approach-grid,
+.contact-steps {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.process-card,
+.impact-card,
+.approach-card,
+.contact-step {
+  position: relative;
+  min-height: 190px;
+  padding: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: linear-gradient(145deg, var(--card-bg), rgb(17 29 50 / 58%));
+}
+
+.process-card__number,
+.impact-card__number,
+.approach-card__number,
+.contact-step__number {
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+}
+
+.process-card__title,
+.impact-card__title,
+.approach-card__title,
+.contact-step__title {
+  margin: 1.2rem 0 0.55rem;
+  font-size: 1.08rem;
+  font-weight: 650;
+}
+
+.process-card__description,
+.impact-card__description,
+.approach-card__description,
+.contact-step__description {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.impact-card {
+  min-height: 210px;
+  border-top: 2px solid rgb(16 185 129 / 55%);
+}
+
+.impact-card__number {
+  display: inline-grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border: 1px solid rgb(16 185 129 / 24%);
+  border-radius: 50%;
+  background: var(--surface-glow);
+}
+
+.project-approach {
+  padding-bottom: 0;
+}
+
+.project-approach__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 2%);
+}
+
+.project-approach__note {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.contact-next-steps {
+  margin-top: clamp(4rem, 8vw, 7rem);
+}
+
+.contact-step {
+  min-height: 175px;
+}
