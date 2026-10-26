@@ -13,10 +13,42 @@ const router = createRouter({
     return savedPosition ?? { top: 0 }
   },
   routes: [
-    { path: '/', name: 'home', component: Home, meta: { titleKey: 'home' } },
-    { path: '/about', name: 'about', component: () => import('@/views/About.vue'), meta: { titleKey: 'about' } },
-    { path: '/projects', name: 'projects', component: () => import('@/views/Projects.vue'), meta: { titleKey: 'projects' } },
-    { path: '/contacts', name: 'contacts', component: () => import('@/views/Contacts.vue'), meta: { titleKey: 'contacts' } },
+    { 
+      path: '/',
+      name: 'home',
+      component: Home, 
+      meta: { 
+        titleKey: 'home' 
+      }
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('@/views/About.vue'),
+      meta: { 
+        titleKey: 'about' 
+      }
+    },
+    {
+      path: '/projects',
+      name: 'projects',
+      component: () => import('@/views/Projects.vue'),
+      meta: { 
+        titleKey: 'projects' 
+      }
+    },
+    {
+      path: '/contacts',
+      name: 'contacts',
+      component: () => import('@/views/Contacts.vue'),
+      meta: { 
+        titleKey: 'contacts' 
+      } 
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
+    },
   ],
 })
 
