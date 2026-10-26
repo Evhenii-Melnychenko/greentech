@@ -76,7 +76,14 @@
     },
   ]
 
-  const citySteps = ['home.cityStep1', 'home.cityStep2', 'home.cityStep3']
+  const citySteps = [
+    'home.cityStep1',
+    'home.cityStep2',
+    'home.cityStep3',
+    'home.cityStep4',
+    'home.cityStep5',
+    'home.cityStep6',
+  ]
 </script>
 
 <template>
@@ -180,7 +187,7 @@
           <p class="section-heading__description">{{ t('home.processDescription') }}</p>
         </div>
         <div class="process-grid">
-          <article v-for="(stepKey, index) in citySteps" :key="stepKey" class="process-card scroll-reveal">
+          <article v-for="(stepKey, index) in citySteps" :key="stepKey" class="process-card">
             <span class="process-card__number">0{{ index + 1 }}</span>
             <AnimatedHeading class="process-card__title" tag="h3" :lines="[[{ text: t(`${stepKey}Title`) }]]" />
             <p class="process-card__description">{{ t(`${stepKey}Description`) }}</p>
@@ -189,14 +196,5 @@
       </div>
     </section>
 
-    <section class="container section section--compact-top">
-      <div class="page-cta scroll-reveal">
-        <div>
-          <AnimatedHeading class="page-cta__title" tag="h2" :lines="[[{ text: t('home.ctaTitle') }]]" />
-          <p class="page-cta__description">{{ t('home.ctaDescription') }}</p>
-        </div>
-        <RouterLink class="button" to="/contacts">{{ t('common.contactUs') }} <span aria-hidden="true">→</span></RouterLink>
-      </div>
-    </section>
   </div>
 </template>

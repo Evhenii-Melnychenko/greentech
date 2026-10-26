@@ -2,6 +2,7 @@
   import { RouterView } from 'vue-router'
   import SiteHeader from '@/components/SiteHeader.vue'
   import SiteFooter from '@/components/SiteFooter.vue'
+  import PageCta from '@/components/PageCta.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@
     <main class="main-content">
       <RouterView />
     </main>
+    <PageCta />
     <SiteFooter />
   </div>
 </template>

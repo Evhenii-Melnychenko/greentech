@@ -93,12 +93,16 @@
             <span class="contact-card__icon" aria-hidden="true">↗</span>
             <div><span class="contact-card__label">{{ t('contacts.phoneLabel') }}</span><a class="contact-card__value" href="tel:+48123456789">+48 12 345 67 89</a></div>
           </article>
-          <div class="location-card" role="img" :aria-label="t('contacts.locationAria')">
-            <span class="location-card__pin" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3" /><path d="M19 10c0 5-7 12-7 12S5 15 5 10a7 7 0 1 1 14 0Z" /></svg>
-            </span>
-            <span class="location-card__label">{{ t('contacts.locationLabel') }}</span>
-          </div>
+          <figure class="location-card">
+            <iframe
+              class="location-card__map"
+              :title="t('contacts.locationMapTitle')"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=19.9250%2C50.0620%2C19.9510%2C50.0780&amp;layer=mapnik&amp;marker=50.0702%2C19.9360"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            ></iframe>
+            <figcaption class="location-card__label">{{ t('contacts.locationLabel') }}</figcaption>
+          </figure>
         </div>
 
         <form class="contact-form" novalidate @submit.prevent="handleSubmit">

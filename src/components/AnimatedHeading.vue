@@ -43,21 +43,31 @@
 <template>
   <component :is="tag" class="animated-heading" :aria-label="accessibleText">
     <span class="animated-heading__visual" aria-hidden="true">
-      <span v-for="(line, lineIndex) in typedLines" :key="lineIndex" class="animated-heading__line">
+      <template v-if="tag === 'h1'">
+        <span v-for="(line, lineIndex) in typedLines" :key="lineIndex" class="animated-heading__line">
+          <span
+            v-for="(segment, segmentIndex) in line"
+            :key="segmentIndex"
+            class="animated-heading__segment"
+            :class="{ 'animated-heading__segment--accent': segment.accent }"
+          >
+            <span
+              v-for="(character, characterIndex) in segment.characters"
+              :key="characterIndex"
+              class="animated-heading__character"
+              :style="{ animationDelay: `${character.delay}ms` }"
+            >{{ character.character }}</span>
+          </span>
+          <span v-if="lineIndex === typedLines.length - 1" class="animated-heading__cursor" :style="{ animationDelay: cursorDelay }">|</span>
+        </span>
+      </template>
+      <span v-else v-for="(line, lineIndex) in lines" :key="lineIndex" class="animated-heading__line">
         <span
           v-for="(segment, segmentIndex) in line"
           :key="segmentIndex"
           class="animated-heading__segment"
           :class="{ 'animated-heading__segment--accent': segment.accent }"
-        >
-          <span
-            v-for="(character, characterIndex) in segment.characters"
-            :key="characterIndex"
-            class="animated-heading__character"
-            :style="{ animationDelay: `${character.delay}ms` }"
-          >{{ character.character }}</span>
-        </span>
-        <span v-if="lineIndex === typedLines.length - 1" class="animated-heading__cursor" :style="{ animationDelay: cursorDelay }">|</span>
+        >{{ segment.text }}</span>
       </span>
     </span>
   </component>

@@ -91,10 +91,6 @@
             <p class="approach-card__description">{{ t(`projects.approach${step}Description`) }}</p>
           </article>
         </div>
-        <div class="project-approach__cta">
-          <p class="project-approach__note">{{ t('projects.approachCtaNote') }}</p>
-          <RouterLink class="button" to="/contacts">{{ t('common.contactUs') }} <span aria-hidden="true">→</span></RouterLink>
-        </div>
       </section>
     </div>
   </section>

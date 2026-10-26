@@ -2,6 +2,8 @@
 
 An adaptive SPA showcasing digital solutions for greener, more comfortable cities. The interface is available in English and Polish. Use the language switcher in the header to change languages; the selected language is saved in `localStorage` and restored on your next visit.
 
+[Live demo](https://greentech-alpha-rosy.vercel.app/)
+
 ## Features
 
 - Home page with interactive environmental impact counters and technology cards.
@@ -9,9 +11,14 @@ An adaptive SPA showcasing digital solutions for greener, more comfortable citie
 - An additional home page section outlining the path from city monitoring to measurable improvements.
 - About page featuring the team’s mission, impact areas, and a vertical timeline.
 - A catalog of urban projects with Pinia-powered category filtering and an overview of implementation stages.
+- A six-stage home page process, presented in an alternating responsive card layout.
+- A shared pre-footer call to action with page-specific messaging in English and Polish.
 - Contact form with required-field, email, and minimum message-length validation, plus an overview of collaboration stages. Validation errors and interface text are localized.
+- Contact page with a dark-themed OpenStreetMap embed centered on the Kraków office.
 - Urban GreenTech office in Kraków, with a Polish address and phone number.
-- Typewriter effect for page, section, and card headings.
+- Typewriter effect for page-level `h1` headings; section and card headings appear without the typing animation.
+- Project page heading has responsive wrapping and enough width to display its full animated title.
+- Reusable card-reveal animation with staggered timing for the project implementation cards.
 - Scroll-animated timeline: the line fills and nodes appear as they enter the viewport.
 - Scroll-driven CSS animations using `animation-timeline: view()`, fallbacks for unsupported browsers, and `prefers-reduced-motion` support.
 - Responsive dark theme and BEM class naming.
@@ -33,17 +40,19 @@ src/
 │   ├── base.css            # Theme variables and base styles
 │   ├── main.css            # Entry point with a stable CSS import order
 │   └── styles/
+│       ├── animations.css  # Shared keyframes and reusable card-reveal animation
 │       ├── foundation.css  # Shared layout, typography, and base effects
 │       ├── site-shell.css  # Header, navigation, and footer
 │       ├── home.css        # Home page, orbital visualization, and metrics
 │       ├── about.css       # Mission and animated timeline
 │       ├── shared-cards.css # Shared technology cards and process steps
-│       ├── projects.css    # Project filters and cards
+│       ├── projects.css    # Project filters, cards, and responsive implementation layout
 │       ├── contacts.css    # Contact information, map, and form
 │       ├── cta.css         # Shared call to action
-│       └── responsive.css  # Responsive rules and scroll-animation fallbacks
+│       └── responsive.css  # Responsive rules, reduced-motion support, and scroll-animation fallbacks
 ├── components/
-│   ├── AnimatedHeading.vue # Reusable typewriter heading
+│   ├── AnimatedHeading.vue # Reusable heading; typewriter effect is limited to h1
+│   ├── PageCta.vue         # Shared localized call to action before the footer
 │   ├── SiteHeader.vue      # Navigation and language switcher
 │   └── SiteFooter.vue      # Shared footer
 ├── i18n/
@@ -63,7 +72,7 @@ src/
 └── main.ts                 # Pinia, I18n, and Router setup
 ```
 
-Styles are organized by shared elements and pages. `src/assets/main.css` imports them in their original order to preserve the cascade and application behavior; BEM classes and CSS rule values were not changed during the split.
+Styles are organized by shared elements and pages. `src/assets/main.css` imports the stylesheets in a stable order to preserve the cascade. Components use BEM-style class names, with shared animation keyframes in `src/assets/styles/animations.css`.
 
 ## Localization
 

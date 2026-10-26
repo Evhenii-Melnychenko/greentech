@@ -23,6 +23,28 @@ const messages = {
     footer: {
       note: 'Urban GreenTech. Technology for living in harmony with nature.',
     },
+    pageCta: {
+      home: {
+        title: 'Have an idea for a greener city?',
+        description: 'Tell us about your city’s challenge and let’s find a practical first step together.',
+        button: 'Let’s talk',
+      },
+      about: {
+        title: 'Want to help shape more livable cities?',
+        description: 'We bring local knowledge and technology together to make meaningful change.',
+        button: 'Meet the team',
+      },
+      projects: {
+        title: 'Facing a similar urban challenge?',
+        description: 'Let’s explore an approach that fits your community and its priorities.',
+        button: 'Discuss a project',
+      },
+      contacts: {
+        title: 'Still exploring possibilities?',
+        description: 'See how practical ideas can turn into measurable improvements for cities.',
+        button: 'Explore projects',
+      },
+    },
     home: {
       badge: 'The smart city starts today',
       eyebrow: 'Next-generation ecology',
@@ -56,8 +78,12 @@ const messages = {
       cityStep2Description: 'Bring city teams and experts together around a solution that fits the place.',
       cityStep3Title: 'Measure the change',
       cityStep3Description: 'Track results over time and improve the system as the city evolves.',
-      ctaTitle: 'Ready to make your city better?',
-      ctaDescription: 'Let’s find a greener solution for your city together.',
+      cityStep4Title: 'Pilot the solution',
+      cityStep4Description: 'Put the idea to work in a real neighbourhood and learn from the people who use it.',
+      cityStep5Title: 'Learn and refine',
+      cityStep5Description: 'Use measured results and local feedback to strengthen what works.',
+      cityStep6Title: 'Scale what works',
+      cityStep6Description: 'Expand proven improvements to more neighbourhoods and communities.',
     },
     about: {
       eyebrow: 'About Urban GreenTech',
@@ -138,7 +164,12 @@ const messages = {
       approach2Description: 'We design and pilot a practical solution alongside city teams and local partners.',
       approach3Title: 'Scale what works',
       approach3Description: 'We measure outcomes, share what we learn, and expand successful projects responsibly.',
-      approachCtaNote: 'Have a challenge in mind? Let’s find the right starting point.',
+      approach4Title: 'Pilot locally',
+      approach4Description: 'We test the solution in a real setting and learn alongside the community.',
+      approach5Title: 'Measure impact',
+      approach5Description: 'We track results, share what we learn, and refine the approach using real evidence.',
+      approach6Title: 'Scale what works',
+      approach6Description: 'We expand successful projects responsibly so proven benefits reach more people.',
     },
     contacts: {
       eyebrow: 'Contact',
@@ -152,6 +183,7 @@ const messages = {
       phoneLabel: 'Phone',
       locationLabel: 'Kraków · 12 Długa Street',
       locationAria: 'Schematic map showing our office in Kraków, Poland',
+      locationMapTitle: 'Map showing the Urban GreenTech office in Kraków',
       formTitle: 'Send us a message',
       formHint: 'Fill in the form and we’ll get back to you.',
       nameLabel: 'Your name',
@@ -202,6 +234,28 @@ const messages = {
     footer: {
       note: 'Urban GreenTech. Technologia w harmonii z naturą.',
     },
+    pageCta: {
+      home: {
+        title: 'Masz pomysł na bardziej zielone miasto?',
+        description: 'Opowiedz nam o wyzwaniu swojego miasta, a wspólnie znajdziemy pierwszy krok.',
+        button: 'Porozmawiajmy',
+      },
+      about: {
+        title: 'Chcesz współtworzyć miasta lepsze do życia?',
+        description: 'Łączymy lokalną wiedzę i technologię, by wprowadzać realne zmiany.',
+        button: 'Poznaj zespół',
+      },
+      projects: {
+        title: 'Twoje miasto mierzy się z podobnym wyzwaniem?',
+        description: 'Poszukajmy podejścia dopasowanego do lokalnej społeczności i jej potrzeb.',
+        button: 'Porozmawiajmy o projekcie',
+      },
+      contacts: {
+        title: 'Chcesz poznać więcej możliwości?',
+        description: 'Zobacz, jak praktyczne pomysły mogą przynosić mierzalne korzyści miastom.',
+        button: 'Poznaj projekty',
+      },
+    },
     home: {
       badge: 'Inteligentne miasto zaczyna się dziś',
       eyebrow: 'Ekologia nowej generacji',
@@ -235,8 +289,12 @@ const messages = {
       cityStep2Description: 'Łączymy zespoły miejskie i ekspertów wokół rozwiązania dopasowanego do miejsca.',
       cityStep3Title: 'Mierzymy zmianę',
       cityStep3Description: 'Monitorujemy wyniki i rozwijamy system wraz ze zmieniającymi się potrzebami miasta.',
-      ctaTitle: 'Chcesz, aby Twoje miasto było lepsze?',
-      ctaDescription: 'Wspólnie znajdźmy ekologiczne rozwiązanie dla Twojego miasta.',
+      cityStep4Title: 'Testujemy rozwiązanie',
+      cityStep4Description: 'Wdrażamy pomysł w prawdziwej dzielnicy i słuchamy osób, które z niego korzystają.',
+      cityStep5Title: 'Wyciągamy wnioski',
+      cityStep5Description: 'Wykorzystujemy wyniki i opinie mieszkańców, aby ulepszać sprawdzone rozwiązania.',
+      cityStep6Title: 'Rozwijamy to, co działa',
+      cityStep6Description: 'Wdrażamy sprawdzone usprawnienia w kolejnych dzielnicach i społecznościach.',
     },
     about: {
       eyebrow: 'O Urban GreenTech',
@@ -317,7 +375,12 @@ const messages = {
       approach2Description: 'Projektujemy i testujemy praktyczne rozwiązanie wraz z zespołami miejskimi i partnerami.',
       approach3Title: 'Rozwijamy to, co działa',
       approach3Description: 'Mierzymy efekty, dzielimy się wnioskami i odpowiedzialnie rozwijamy sprawdzone projekty.',
-      approachCtaNote: 'Masz konkretne wyzwanie? Znajdźmy dobry punkt wyjścia.',
+      approach4Title: 'Testujemy lokalnie',
+      approach4Description: 'Sprawdzamy rozwiązanie w rzeczywistych warunkach i uczymy się razem ze społecznością.',
+      approach5Title: 'Mierzymy wpływ',
+      approach5Description: 'Śledzimy efekty, dzielimy się wnioskami i ulepszamy podejście na podstawie danych.',
+      approach6Title: 'Rozwijamy to, co działa',
+      approach6Description: 'Odpowiedzialnie rozwijamy sprawdzone projekty, by ich korzyści obejmowały więcej osób.',
     },
     contacts: {
       eyebrow: 'Kontakt',
@@ -331,6 +394,7 @@ const messages = {
       phoneLabel: 'Telefon',
       locationLabel: 'Kraków · ul. Długa 12',
       locationAria: 'Schematyczna mapa lokalizacji naszego biura w Krakowie, Polska',
+      locationMapTitle: 'Mapa z lokalizacją biura Urban GreenTech w Krakowie',
       formTitle: 'Napisz do nas',
       formHint: 'Wypełnij formularz, a skontaktujemy się z Tobą.',
       nameLabel: 'Imię i nazwisko',

@@ -1,3 +1,5 @@
+@import "./animations.css";
+
 .about-intro {
   padding-top: 5rem;
 }
@@ -56,24 +58,11 @@
   animation-range: entry 0% exit 0%;
 }
 
-@keyframes timeline-progress {
-  to {
-    transform: scaleY(1);
-  }
-}
-
 .timeline__node {
   transform: scale(0.25);
   animation: timeline-node-reveal both;
   animation-timeline: view(block);
   animation-range: entry 5% entry 65%;
-}
-
-@keyframes timeline-node-reveal {
-  to {
-    transform: scale(1);
-    box-shadow: 0 0 0 5px rgb(16 185 129 / 13%), 0 0 24px rgb(16 185 129 / 65%);
-  }
 }
 
 .timeline__item {

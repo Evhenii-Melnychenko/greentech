@@ -53,9 +53,19 @@
   .projects-grid,
   .process-grid,
   .impact-grid,
-  .approach-grid,
   .contact-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .section .process-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .section .process-card,
+  .section .process-card:nth-child(1),
+  .section .process-card:nth-child(4),
+  .section .process-card:nth-child(5) {
+    grid-column: span 6;
   }
 
   .contact-layout {
@@ -138,14 +148,22 @@
   .projects-grid,
   .process-grid,
   .impact-grid,
-  .approach-grid,
   .contact-steps {
     grid-template-columns: 1fr;
   }
 
+  .section .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section .process-card,
+  .section .process-card:nth-child(1),
+  .section .process-card:nth-child(4),
+  .section .process-card:nth-child(5) {
+    grid-column: auto;
+  }
   .site-footer__inner,
-  .page-cta,
-  .project-approach__cta {
+  .page-cta {
     align-items: flex-start;
     flex-direction: column;
   }

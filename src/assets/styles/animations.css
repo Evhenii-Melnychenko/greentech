@@ -22,6 +22,19 @@
   }
 }
 
+@keyframes timeline-progress {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes timeline-node-reveal {
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgb(16 185 129 / 13%), 0 0 24px rgb(16 185 129 / 65%);
+  }
+}
+
 .card-reveal {
   animation: cardReveal 0.8s ease-out backwards;
   animation-delay: var(--card-reveal-delay, 0ms);
